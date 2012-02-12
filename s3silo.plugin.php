@@ -46,6 +46,7 @@ class S3SiloPlugin extends Plugin implements MediaSilo
 		if($buckets !== false && $this->key != '' && $this->private_key != '') {
 			$s3 = $this->gets3();
 			$buckets = $s3->listBuckets();
+			$buckets = array_combine($buckets, $buckets);
 			$ui->append( 'select', 'bucket', 's3_bucket', _t( 'The bucket address', 's3siloplugin' ), $buckets );
 		}
 
@@ -124,8 +125,10 @@ class S3SiloPlugin extends Plugin implements MediaSilo
 	public function silo_info()
 	{
 		$s3 = $this->gets3();
-		$contents = $s3->listBuckets();
-		var_dump($contents);
+		if(false == $s3->listBuckets()) {
+			return false;
+		}
+
 		return array(
 			'name' => self::SILO_NAME,
 			'icon' => URL::get_from_filesystem( __FILE__ ) . '/icon.png'
