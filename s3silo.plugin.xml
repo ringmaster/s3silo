@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<pluggable type="plugin" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://schemas.habariproject.org/pluggable/0.8">
+	<name>AWS S3 Media Silo</name>
+	<license url="http://www.apache.org/licenses/LICENSE-2.0.html">Apache Software License 2.0</license>
+	
+	<author url="http://habariproject.org/">Owen Winkler</author>
+	
+	<version>1.0</version>
+	<url>http://habariproject.org/</url>
+	<description><![CDATA[Provides silo access to Amazon Web Service's Simple Storage Service.]]></description>
+
+	<copyright>2011</copyright>
+	
+	<help>
+		<value><![CDATA[
+		]]></value>
+	</help>
+	
+</pluggable>
